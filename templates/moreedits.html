@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+        
+    <meta charset="UTF-8">
+
+        <title>Daily Grind</title>
+
+        <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #C59A6C;
+            /* sets the background color of the entire page */
+        }x
+
+        header {
+            background-size: cover;
+            background-image: url("header_white2.png");
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+            
+
+        }
+
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #8B4513;
+            /* sets the background color of the navigation bar */
+            padding: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            background-color: #D2B48C;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #A0522D;
+        }
+
+        main {
+            background-color: #F5F5F5;
+            /* sets the background color of the main content area */
+            padding: 20px;
+            padding-bottom: 80px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-image: url("https://cdn.pixabay.com/photo/2020/07/18/16/29/coffee-5417663_1280.png");
+			min-height: calc(100vh - 50px - 20px); /* Subtract the header height and image padding */
+
+        }
+
+        fieldset {
+            border: 2px solid #8B4513;
+            padding: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #FFF;
+            /* sets the background color of the fieldset */
+            border-radius: 5px;
+        }
+
+        legend {
+
+            font-size: 1.2em;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+
+            color: #8B4513;
+
+        }
+
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #8B4513;
+
+        }
+
+
+
+        input[type="search"],
+
+        button {
+
+            padding: 8px;
+
+            font-size: 1em;
+
+            border: none;
+
+            background-color: #8B4513;
+
+            color: #fff;
+
+            cursor: pointer;
+
+        }
+
+
+
+        input[type="search"] {
+
+            width: 80%;
+
+            margin-right: 10px;
+
+        }
+
+
+
+        button {
+    
+            text-align: center;
+            width: 15%;
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <img src="{{ url_for('static', filename='withblurb.png') }}" alt="Header Image" style="display: block; margin: 0 auto; padding-bottom: 15px;">
+
+        </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+
+        <fieldset>
+
+            <!-- <form action=“/submit” method=“POST”> -->
+            <form action="/submit" method="post">
+            <!-- <form method="post" action="/">  -->
+            <!--form method="post" action="{{ url_for('output') }}"--> 
+
+                <legend style="text-align: center;">Choose your features:</legend>
+
+                <label style="font-style: italic; font-size: 14px;text-align: center;">Please select one for each!</label>
+
+                <br>
+
+                <div>
+
+                    <label for="price_level">Choose one price level:</label>
+
+                    <select name="price_level" id="price_level" multiple>
+
+                        <option value="1">$</option>
+
+                        <option value="2">$$</option>
+
+                        <option value="3">$$$</option>
+
+                        <option value="4">$$$$</option>
+
+                    </select>
+
+                </div>
+
+                <br>
+
+                <div>
+
+                    <label for="rating">Choose one rating:</label>
+
+                    <select name="rating" id="rating" multiple>
+
+                        <option value="1">*</option>
+
+                        <option value="2">**</option>
+
+                        <option value="3">***</option>
+
+                        <option value="4">****</option>
+
+                        <option value="5">*****</option>
+
+                    </select>
+
+                </div>
+
+                <br>
+
+                <div>
+
+
+
+                    <label for="neighborhoods">Choose one neighborhood:</label>
+
+                    
+                    <select name="neighborhoods" id="neighborhoods">
+
+                        
+
+                        <option value="UpperWestSide">Upper West Side</option>
+
+                        
+
+                        <option value="Midtown">Midtown</option>
+                        
+
+                        <option value="UpperEastSide">Upper East Side</option>
+
+                        
+
+                        <option value="HellsKitchen">Hell’s Kitchen</option>
+
+                        
+
+                        <option value="Chelsea">Chelsea</option>
+
+                        
+
+                        <option value="Soho">Soho</option>
+
+                        
+
+                        <option value="Chinatown">Chinatown</option>
+
+                        
+
+                        <option value="EastVillage">East Village</option>
+
+                        
+
+                        <option value="Greenwich">Greenwich</option>
+
+                        
+
+                        <option value="FinancialDistrict">Financial District</option>
+
+                    </select>
+
+                </div>
+
+                    <br>
+
+                    <label for="site-search">Types:</label>
+
+                    <input type="search" id="site-search" name="q">
+
+                    <br><br>
+
+                        <button type="submit">Submit</button>
+
+            </form>
+
+        </fieldset>
+
+    </main>
+
+    
+
+</body>
+
+
+
+</html>
